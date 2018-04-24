@@ -22,12 +22,17 @@ public class Olive extends Product{
     }
 
     @Override
-    public int getCal() {
+    public int getCalories() {
         return cal;
     }
 
     @Override
     public int getOnePortion() {
         return onePortion;
+    }
+
+    @Override
+    public double getCalForOnePortion() {
+        return super.getCalForOnePortion();
     }
 }

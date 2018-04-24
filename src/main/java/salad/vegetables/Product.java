@@ -1,7 +1,5 @@
 package salad.vegetables;
 
-import lombok.Getter;
-import lombok.Setter;
 import salad.enums.Type;
 
 /**
@@ -13,18 +11,26 @@ public abstract class Product {
     private int cal = 0;
     private int onePortion = 0;
 
-    protected Product() {
+    protected Product(Type vegetable, int cal, int onePortion) {
+        this.vegetable = vegetable;
+        this.cal = cal;
+        this.onePortion = onePortion;
     }
 
     public Type getVegetable() {
         return vegetable;
     }
 
-    public int getCal() {
+    public int getCalories() {
         return cal;
     }
 
     public int getOnePortion() {
         return onePortion;
+    }
+
+    public double getCalForOnePortion(){
+        double calForOneGr = getCalories()/100;
+        return calForOneGr*getOnePortion();
     }
 }

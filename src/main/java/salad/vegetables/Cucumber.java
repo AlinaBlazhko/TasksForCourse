@@ -10,7 +10,7 @@ import static salad.enums.Type.CUCUMBER;
 
 public class Cucumber extends Product{
     private Type vegetable  = CUCUMBER;
-    private int cal = 109;
+    private int cal = 100;
     private int onePortion = 30;
 
     public Cucumber(){super();}
@@ -21,12 +21,17 @@ public class Cucumber extends Product{
     }
 
     @Override
-    public int getCal() {
+    public int getCalories() {
         return cal;
     }
 
     @Override
     public int getOnePortion() {
         return onePortion;
+    }
+
+    @Override
+    public double getCalForOnePortion() {
+        return super.getCalForOnePortion();
     }
 }

@@ -1,8 +1,5 @@
 package salad.vegetables;
 
-import lombok.Getter;
-import lombok.Setter;
-import salad.enums.Type;
 import salad.enums.Type;
 
 import static salad.enums.Type.TOMATO;
@@ -12,8 +9,6 @@ import static salad.enums.Type.TOMATO;
  * Created by X240 on 4/21/2018.
  */
 
-@Getter
-@Setter
 public class Tomato extends Product{
 
     private Type vegetable = TOMATO;
@@ -25,7 +20,7 @@ public class Tomato extends Product{
     }
 
     @Override
-    public int getCal() {
+    public int getCalories() {
         return cal;
     }
 
@@ -35,5 +30,10 @@ public class Tomato extends Product{
     }
     public Tomato() {
         super();
+    }
+
+    @Override
+    public double getCalForOnePortion() {
+        return super.getCalForOnePortion();
     }
 }

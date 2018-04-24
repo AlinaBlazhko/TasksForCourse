@@ -1,16 +1,21 @@
-package salad;
+package salad.Employees;
 
+import salad.Portion;
 import salad.enums.Type;
 import salad.exceptions.MenuException;
 import salad.vegetables.*;
 
-import java.util.*;
+import javax.sound.sampled.Port;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-/**
- * Created by X240 on 4/22/2018.
- */
-public class Server {
-    public List<Portion> takeOrder() {
+public class Server implements Employee{
+
+    String name = "Alex";
+    String job = "Server";
+
+    public List<Portion> order() {
         List<Portion> portionList = new ArrayList<Portion>();
         Scanner in = new Scanner(System.in);
         System.out.print("1. Potato\n" +
@@ -71,5 +76,9 @@ public class Server {
             total = total + portion.sumCal();
         }
         System.out.println("TOTAL: " + total + " kcal");
+    }
+
+    public void presentation() {
+        System.out.println("Good evening! My name is " + name + " I am your " + job + " for today");
     }
 }

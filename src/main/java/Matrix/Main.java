@@ -5,11 +5,35 @@ package Matrix;
  */
 public class Main {
     public static void main(String[] args) {
-        Matrix matrix1 = new Matrix(2, 2);
-        Matrix matrix2 = new Matrix(2, 2);
-        Matrix matrix3 = new Matrix(2, 2);
+        int[][] mA ={{33, 34, 12},
+                    {33, 19, 10},
+                    {12, 14, 17},
+                    {84, 24, 51},
+                    {43, 71, 21}};
 
-        matrix1.fill();
-        matrix2.fill();
+        int[][] mB ={{10, 11, 34, 55},
+                    {33, 45, 17, 81},
+                    {45, 63, 12, 16}};
+
+
+        int m = mA.length;
+        int n = mB[0].length;
+        int o = mB.length;
+        int[][] res = new int[m][n];
+
+        for (int i = 0; i < mA.length; i++) {
+            for (int j = 0; j < mB.length; j++) {
+                for (int k = 0; k < o; k++) {
+                    res[i][j] += mA[i][k] * mB[k][j];
+                }
+            }
+        }
+
+        for (int i = 0; i < res.length; i++) {
+            for (int j = 0; j < res[0].length; j++) {
+                System.out.format("%6d ", res[i][j]);
+            }
+            System.out.println();
+        }
     }
 }

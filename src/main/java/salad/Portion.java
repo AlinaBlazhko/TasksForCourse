@@ -33,7 +33,7 @@ public class Portion {
     }
 
     public int sumCal(){
-        return (product.getCal()/100)*count;
+        return (int) (product.getCalForOnePortion()*count);
     }
 
 }

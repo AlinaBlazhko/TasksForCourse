@@ -1,6 +1,8 @@
 package salad;
 
 import java.util.*;
+
+import salad.Employees.Server;
 import salad.vegetables.*;
 
 
@@ -11,8 +13,9 @@ import salad.vegetables.*;
 public class Main {
     public static void main(String[] args) {
         Server server = new Server();
+        server.presentation();
         List<Portion> portionList = new ArrayList<Portion>();
-        portionList = server.takeOrder();
+        portionList = server.order();
         server.getAllOrderWithSortVegetablesByCalories(portionList);
     }
 }

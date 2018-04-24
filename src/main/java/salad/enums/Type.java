@@ -1,6 +1,5 @@
 package salad.enums;
 
-import lombok.Getter;
 
 /**
  * Created by X240 on 4/21/2018.
