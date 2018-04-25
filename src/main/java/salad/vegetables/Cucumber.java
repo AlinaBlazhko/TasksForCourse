@@ -1,37 +1,13 @@
 package salad.vegetables;
 
-import salad.enums.*;
-
 import static salad.enums.Type.CUCUMBER;
 
 /**
  * Created by X240 on 4/21/2018.
  */
 
-public class Cucumber extends Product{
-    private Type vegetable  = CUCUMBER;
-    private int cal = 100;
-    private int onePortion = 30;
+public class Cucumber extends Vegetable {
 
-    public Cucumber(){super();}
+    public Cucumber(){super(CUCUMBER, 100, 30);}
 
-    @Override
-    public Type getVegetable() {
-        return vegetable;
-    }
-
-    @Override
-    public int getCalories() {
-        return cal;
-    }
-
-    @Override
-    public int getOnePortion() {
-        return onePortion;
-    }
-
-    @Override
-    public double getCalForOnePortion() {
-        return super.getCalForOnePortion();
-    }
 }

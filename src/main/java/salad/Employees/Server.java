@@ -5,7 +5,6 @@ import salad.enums.Type;
 import salad.exceptions.MenuException;
 import salad.vegetables.*;
 
-import javax.sound.sampled.Port;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -26,7 +25,7 @@ public class Server implements Employee{
                 "6. Olive\n");
 
         String answer = "yes";
-        Product product = null;
+        Vegetable product = null;
         while (!(in.nextLine().equals("no"))) {
             System.out.print("Choose number: ");
             int number = in.nextInt();
@@ -72,7 +71,7 @@ public class Server implements Employee{
         System.out.println("Your order: ");
         int total = 0;
         for (Portion portion: portions){
-            System.out.println(portion.getProduct().getVegetable() + " : " + portion.sumCal() + "cal");
+            System.out.println(portion.getProduct().getName() + " : " + portion.sumCal() + "cal");
             total = total + portion.sumCal();
         }
         System.out.println("TOTAL: " + total + " kcal");
