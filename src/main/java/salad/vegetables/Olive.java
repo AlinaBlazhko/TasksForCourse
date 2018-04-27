@@ -8,7 +8,7 @@ import static salad.enums.Type.OLIVES;
 
 public class Olive extends Vegetable {
 
-    public Olive(){super(OLIVES, 164, 20);}
+    public Olive(){super(OLIVES.getName(), 164, 20);}
 
     @Override
     public double getCalForOnePortion() {

@@ -7,5 +7,5 @@ import static salad.enums.Type.LEAF_SALAD;
  */
 
 public class LeafSalad extends Vegetable {
-    public LeafSalad(){super(LEAF_SALAD, 19, 30);}
+    public LeafSalad(){super(LEAF_SALAD.getName(), 19, 30);}
 }

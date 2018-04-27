@@ -2,22 +2,32 @@ package salad.vegetables;
 
 import salad.enums.Type;
 
+import java.io.StringReader;
+
 /**
  * Created by X240 on 4/21/2018.
  */
 
 public abstract class Vegetable {
-    private Type name = null;
-    private int cal = 0;
-    private int onePortion = 0;
+    private String name;
+    private int cal;
+    private int onePortion;
+    private String category;
 
-    protected Vegetable(Type vegetable, int cal, int onePortion) {
+    protected Vegetable(String category, String vegetable, int cal, int onePortion) {
+        this.category = category;
         this.name = vegetable;
         this.cal = cal;
         this.onePortion = onePortion;
     }
 
-    public Type getName() {
+    protected Vegetable(String vegetable, int cal, int onePortion) {
+        this.name = vegetable;
+        this.cal = cal;
+        this.onePortion = onePortion;
+    }
+
+    public String getName() {
         return name;
     }
 
@@ -32,5 +42,19 @@ public abstract class Vegetable {
     public double getCalForOnePortion(){
         double calForOneGr = getCalories()/100;
         return calForOneGr*getOnePortion();
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+
+    @Override
+    public String toString() {
+        return category + ", " + getName() +",  " + getCalories() + "kcal, " + getOnePortion() + " weight of one portion";
     }
 }

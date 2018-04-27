@@ -17,6 +17,7 @@ public class Server implements Employee{
     public List<Portion> order() {
         List<Portion> portionList = new ArrayList<Portion>();
         Scanner in = new Scanner(System.in);
+
         System.out.print("1. Potato\n" +
                 "2. Tomato\n" +
                 "3. Cucmber\n" +

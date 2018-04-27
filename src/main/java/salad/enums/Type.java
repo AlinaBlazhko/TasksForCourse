@@ -12,7 +12,9 @@ public enum Type {
     ONION("onion"),
     POTATO("potato"),
     LEAF_SALAD("leaf salad"),
-    OLIVES("olives");
+    OLIVES("olives"),
+    PUMPKIN("pumpkin"),
+    BRUSSELS_SPROUT("brussels sprout");
 
     private String name;
 
