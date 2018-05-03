@@ -7,5 +7,5 @@ import static salad.enums.Type.ONION;
  */
 
 public class Onion extends RootVegetable {
-    public Onion(){super(ONION, 40, 100);}
+    public Onion(){super(ONION.getName(), 40, 100);}
 }

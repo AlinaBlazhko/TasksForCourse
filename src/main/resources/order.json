@@ -1,0 +1,12 @@
+{ "vegetables":
+  [
+    {
+      "name":"potato",
+      "weight":100
+    },
+    {
+      "name":"onion",
+      "weight":300
+    }
+  ]
+}

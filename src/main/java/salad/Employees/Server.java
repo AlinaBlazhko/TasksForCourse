@@ -2,7 +2,8 @@ package salad.Employees;
 
 import salad.Portion;
 import salad.enums.Type;
-import salad.exceptions.MenuException;
+import salad.exceptions.IllegalWeightOfIngridientException;
+import salad.exceptions.IllegalNumberException;
 import salad.vegetables.*;
 
 import java.util.ArrayList;
@@ -14,16 +15,24 @@ public class Server implements Employee{
     String name = "Alex";
     String job = "Server";
 
+    public void getAllOrderWithSortVegetablesByCalories(List<Portion> portions){
+        System.out.println("Your order: ");
+        int total = 0;
+        for (Portion portion: portions){
+            System.out.println(portion.getProduct().getName() + " : " + portion.sumCal() + "cal");
+            total = total + portion.sumCal();
+        }
+        System.out.println("TOTAL: " + total + " kcal");
+    }
+
     public List<Portion> order() {
         List<Portion> portionList = new ArrayList<Portion>();
         Scanner in = new Scanner(System.in);
 
         System.out.print("1. Potato\n" +
-                "2. Tomato\n" +
-                "3. Cucmber\n" +
-                "4. Leaf salad\n" +
-                "5. Onion\n" +
-                "6. Olive\n");
+                "2. Pumpkin\n" +
+                "3. Cucumber\n" +
+                "4. Onion");
 
         String answer = "yes";
         Vegetable product = null;
@@ -31,15 +40,15 @@ public class Server implements Employee{
             System.out.print("Choose number: ");
             int number = in.nextInt();
             if ((number < 1) || (number >= Type.values().length))  try {
-                throw new MenuException("Please, choose another product", number);
-            } catch (MenuException e) {
+                throw new IllegalNumberException("Please, choose another product", number);
+            } catch (IllegalNumberException e) {
                 e.printStackTrace();
             }
             System.out.print("How many portions? ");
             int count = in.nextInt();
             if (number < 1)  try {
-                throw new MenuException("Please, choose another count of portions", number);
-            } catch (MenuException e) {
+                throw new IllegalWeightOfIngridientException("Please, choose another count of portions", number);
+            } catch (IllegalWeightOfIngridientException e) {
                 e.printStackTrace();
             }
 
@@ -49,7 +58,7 @@ public class Server implements Employee{
                     portionList.add(new Portion(product, count));
                     break;
                 case 2:
-                    product = new Tomato();
+                    product = new Pumpkin();
                     portionList.add(new Portion(product, count));
                     break;
                 case 3:
@@ -57,25 +66,14 @@ public class Server implements Employee{
                     portionList.add(new Portion(product, count));
                     break;
                 case 4:
-                    product = new LeafSalad();
+                    product = new Onion();
                     portionList.add(new Portion(product, count));
                     break;
             }
             System.out.println("Anything else? ");
             in.nextLine();
-//            if ((!(answer.equals("yes")))||(!(answer.equals("no")))) throw new UnsupportedOperationException("Please enter 'yes' or 'not'");
         }
         return portionList;
-    }
-
-    public void getAllOrderWithSortVegetablesByCalories(List<Portion> portions){
-        System.out.println("Your order: ");
-        int total = 0;
-        for (Portion portion: portions){
-            System.out.println(portion.getProduct().getName() + " : " + portion.sumCal() + "cal");
-            total = total + portion.sumCal();
-        }
-        System.out.println("TOTAL: " + total + " kcal");
     }
 
     public void presentation() {

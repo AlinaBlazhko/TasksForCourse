@@ -6,10 +6,10 @@ import static salad.enums.Type.POTATO;
  * Created by X240 on 4/21/2018.
  */
 
-public class Potato extends Vegetable {
+public class Potato extends RootVegetable {
 
     public Potato() {
-        super(POTATO, 109, 60);
+        super("Potato", 109, 60);
     }
 
 }

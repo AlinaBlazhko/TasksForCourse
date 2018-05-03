@@ -8,5 +8,4 @@ import static salad.enums.Type.CUCUMBER;
 
 public class Cucumber extends CucurbitsVegetable {
     public Cucumber(){super(CUCUMBER.getName(), 100, 30);}
-
 }
