@@ -12,7 +12,4 @@ public class Main {
         Chef chef = new Chef("Ivan");
         chef.takeOrder();
     }
-
-
-
 }

@@ -88,6 +88,13 @@ public class FileReaderAndWriter implements Reader{
                     break;
             }
         }
+
+        System.out.println("Your order: ");
+        Collections.sort(ingridients);
+
+        for(Ingridient str: ingridients){
+            System.out.println(str);
+        }
         return ingridients;
     }
 }

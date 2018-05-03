@@ -4,11 +4,12 @@ import java.util.*;
 
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import preparing_salad.vegetable.Vegetable;
+import sun.rmi.server.InactiveGroupException;
 
 /**
  * Created by X240 on 5/2/2018.
  */
-public class Salad {
+public class Salad{
     private String name;
     private List<Ingridient> ingredients = new ArrayList();
 
@@ -40,10 +41,6 @@ public class Salad {
             result = ingredients.get(i).getWeight() + result;
         }
         return result;
-    }
-
-    public void sortIngredientsByCalories(){
-
     }
 
 }

@@ -67,6 +67,7 @@ public class DBReader implements Reader{
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        System.out.println("Your order: ");
         for (Ingridient in: ingridients) {
             System.out.println(in.getName() + " " + in.getWeight());
         }

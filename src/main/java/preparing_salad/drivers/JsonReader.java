@@ -53,6 +53,17 @@ public class JsonReader implements Reader{
                     break;
             }
         }
+
+//        System.out.println("Your order: ");
+//        for (Ingridient ingridient: ingridients) {
+//            System.out.println(ingridient.toString());
+//        }
+        System.out.println("Your order: ");
+        Collections.sort(ingridients);
+
+        for(Ingridient str: ingridients){
+            System.out.println(str);
+        }
         return ingridients;
     }
 

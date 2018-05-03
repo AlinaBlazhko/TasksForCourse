@@ -1,5 +1,6 @@
 package preparing_salad.drivers;
 
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import preparing_salad.Ingridient;
 import preparing_salad.exceptions.IllegalWeightOfIngridientException;
 import preparing_salad.vegetable.*;
@@ -7,6 +8,7 @@ import preparing_salad.vegetable.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by X240 on 5/3/2018.
@@ -28,6 +30,7 @@ public class ConsoleReader implements Reader{
         String answer = "yes";
         Vegetable product = null;
         while (!(in.nextLine().equals("no"))) {
+            System.out.println("Push Enter");
             System.out.print("Choose number: ");
             int number = in.nextInt();
 
@@ -57,8 +60,15 @@ public class ConsoleReader implements Reader{
                     ingridients.add(new Ingridient(new Pumpkin(), weight));
                     break;
             }
-            System.out.println("Anything else? ");
+            System.out.println("Anything else? (type  \"no\" or \"yes\") ");
             in.nextLine();
+        }
+
+        System.out.println("Your order: ");
+        Collections.sort(ingridients);
+
+        for(Ingridient str: ingridients){
+            System.out.println(str);
         }
         return ingridients;
     }

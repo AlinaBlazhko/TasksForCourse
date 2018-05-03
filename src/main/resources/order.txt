@@ -1,4 +1,3 @@
 potato-40
-potato-40
-potato-40
-potato-40
+carrot-100
+pumpkin-200
