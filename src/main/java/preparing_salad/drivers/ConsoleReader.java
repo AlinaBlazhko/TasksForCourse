@@ -1,9 +1,8 @@
-package preparing_salad;
+package preparing_salad.drivers;
 
+import preparing_salad.Ingridient;
 import preparing_salad.vegetable.Cucumber;
 import preparing_salad.vegetable.Vegetable;
-import salad.exceptions.IllegalWeightOfIngridientException;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -31,12 +30,12 @@ public class ConsoleReader {
             int number = in.nextInt();
 
             System.out.print("How many portions? ");
-            int count = in.nextInt();
-            if (number < 1)  try {
-                throw new IllegalWeightOfIngridientException("Please, choose another count of portions", number);
-            } catch (IllegalWeightOfIngridientException e) {
-                e.printStackTrace();
-            }
+//            int count = in.nextInt();
+//            if (number < 1)  try {
+//                throw new IllegalWeightOfIngridientException("Please, choose another count of portions", number);
+//            } catch (IllegalWeightOfIngridientException e) {
+//                e.printStackTrace();
+//            }
 
 //            switch (number) {
 //                case 1:

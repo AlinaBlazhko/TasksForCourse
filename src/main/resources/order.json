@@ -7,6 +7,14 @@
     {
       "name":"onion",
       "weight":300
+    },
+    {
+      "name":"cucmber",
+      "weight":100
+    },
+    {
+      "name":"carrot",
+      "weight":10
     }
   ]
 }

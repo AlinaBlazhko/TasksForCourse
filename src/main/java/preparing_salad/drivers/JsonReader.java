@@ -1,6 +1,7 @@
-package preparing_salad;
+package preparing_salad.drivers;
 
 import com.google.gson.Gson;
+import preparing_salad.Ingridient;
 import preparing_salad.json.AnswerSchema;
 import preparing_salad.json.OrderJson;
 import preparing_salad.vegetable.*;
@@ -17,12 +18,12 @@ import java.util.List;
 public class JsonReader {
     Gson gson = new Gson();
 
-    public List<Ingridient> readJson(String filePath){
+    public List<Ingridient> readJson(){
         List<Ingridient> ingridients = new ArrayList<Ingridient>();
 
         BufferedReader bufferedReader = null;
         try {
-            bufferedReader = new BufferedReader(new FileReader(filePath));
+            bufferedReader = new BufferedReader(new FileReader("src\\main\\resources\\order.json"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

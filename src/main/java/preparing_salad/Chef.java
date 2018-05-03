@@ -1,5 +1,6 @@
 package preparing_salad;
 
+import preparing_salad.drivers.DataDriver;
 import salad.exceptions.IllegalNumberException;
 
 import java.util.Scanner;
@@ -57,9 +58,9 @@ public class Chef {
         List<Ingridient> ingridientList =  dataDriver.readInput();
 
         System.out.println("Total calories: " + getTotalCalories(ingridientList));
-        for (Ingridient ingridient: ingridientList){
+        /*for (Ingridient ingridient: ingridientList){
             System.out.println(ingridient.toString());
-        }
+        }*/
     }
 
     public double getTotalCalories(List<Ingridient> ingridients){

@@ -1,6 +1,7 @@
-package preparing_salad;
+package preparing_salad.drivers;
 
 
+import preparing_salad.Ingridient;
 import preparing_salad.vegetable.*;
 
 import java.io.BufferedReader;
