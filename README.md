@@ -10,7 +10,8 @@ PART #2, 3, 4
     1. you can choose from different type of input (consol, json, file and database).
       -- If you want choose json you need to change src\main\resources\order.json how do you want:
          For example, if you choose all vegetables your order.json looks like:
-          { "vegetables":
+         
+         { "vegetables":
               [
                 {
                   "name":"carrot",
