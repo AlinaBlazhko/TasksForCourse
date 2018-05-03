@@ -1,6 +1,8 @@
 package preparing_salad;
 
 import java.util.*;
+
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import preparing_salad.vegetable.Vegetable;
 
 /**
@@ -31,12 +33,17 @@ public class Salad {
         this.ingredients = ingredients;
     }
 
+
     public double sumCalories(){
         double result = 0;
         for (int i = 0; i < ingredients.size(); i++){
             result = ingredients.get(i).getWeight() + result;
         }
         return result;
+    }
+
+    public void sortIngredientsByCalories(){
+
     }
 
 }

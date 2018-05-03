@@ -6,10 +6,9 @@ import preparing_salad.vegetable.*;
 import java.sql.*;
 import java.util.*;
 
-public class DBReader {
+public class DBReader implements Reader{
 
-    public static void main(String[] args) {
-        readDB();
+
 //        try {
 //            Connection con = DriverManager.getConnection
 //                    ("jdbc:derby:junkdb;create=true","app","app");
@@ -27,9 +26,11 @@ public class DBReader {
 //        } catch(SQLException e) {
 //            System.out.println("SQL exception occured" + e.toString() );
 //        }
-    }
 
-    public static List<Ingridient> readDB(){
+
+
+    @Override
+    public List<Ingridient> read() {
         List<Ingridient> ingridients = new ArrayList<Ingridient>();
         ResultSet resultSet = null;
         try {

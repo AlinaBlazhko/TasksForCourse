@@ -1,7 +1,7 @@
 package preparing_salad;
 
 import preparing_salad.drivers.DataDriver;
-import salad.exceptions.IllegalNumberException;
+import preparing_salad.exceptions.IllegalNumberException;
 
 import java.util.Scanner;
 import java.util.*;
@@ -43,7 +43,7 @@ public class Chef {
     public void takeOrder(){
         Scanner in = new Scanner(System.in);
         System.out.println("Hello my name is " + getName());
-        System.out.println("Please, choose one of the way ordering and type number:\n" +
+        System.out.println("Please, choose one of the way ordering and type number and push Enter:\n" +
                 "    1. consol\n" +
                 "    2. json\n" +
                 "    3. file\n" +
@@ -58,9 +58,6 @@ public class Chef {
         List<Ingridient> ingridientList =  dataDriver.readInput();
 
         System.out.println("Total calories: " + getTotalCalories(ingridientList));
-        /*for (Ingridient ingridient: ingridientList){
-            System.out.println(ingridient.toString());
-        }*/
     }
 
     public double getTotalCalories(List<Ingridient> ingridients){

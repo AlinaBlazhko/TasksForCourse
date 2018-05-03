@@ -1,7 +1,5 @@
-package home_task_one;
+package calculator;
 import java.util.Scanner;
-
-import static java.lang.Integer.*;
 
 
 /**

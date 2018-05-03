@@ -13,7 +13,7 @@ import java.util.*;
 /**
  * Created by X240 on 5/2/2018.
  */
-public class FileReaderAndWriter {
+public class FileReaderAndWriter implements Reader{
 
     public static void main(String[] args) {
         List<String> order = textReader("src\\main\\resources\\order.txt");
@@ -33,7 +33,6 @@ public class FileReaderAndWriter {
                 case "pumpkin": ingridients.add(new Ingridient(new Pumpkin(), Integer.parseInt(ingridient[1])));
                     break;
             }
-//            ingridients.add(new Ingridient(ingridient[0], Integer.parseInt(ingridient[1])));
         }
 
     }
@@ -66,13 +65,11 @@ public class FileReaderAndWriter {
             e.printStackTrace();
         }
 
-//        for(int i = 0; i < listOfLines.size(); i++){
-//            System.out.println(listOfLines.get(i));
-//        }
         return listOfLines;
     }
 
-    public List<Ingridient> split(){
+    @Override
+    public List<Ingridient> read() {
         List<String> order = textReader("src\\main\\resources\\order.txt");
         List<Ingridient> ingridients = new ArrayList<Ingridient>();
 
@@ -90,7 +87,6 @@ public class FileReaderAndWriter {
                 case "pumpkin": ingridients.add(new Ingridient(new Pumpkin(), Integer.parseInt(ingridient[1])));
                     break;
             }
-//            ingridients.add(new Ingridient(ingridient[0], Integer.parseInt(ingridient[1])));
         }
         return ingridients;
     }

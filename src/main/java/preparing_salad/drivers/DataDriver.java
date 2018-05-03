@@ -10,10 +10,7 @@ public class DataDriver {
     JsonReader jsonReader = new JsonReader();
     FileReaderAndWriter fileReaderAndWriter = new FileReaderAndWriter();
     DBReader dbReader = new DBReader();
-    final static String ORDER_JSON = "src\\main\\resources\\order.json";
-    final static String ANSWER_JSON = "src\\main\\resources\\answer.json";
-    final static String ORDER_TXT = "src\\main\\resources\\order.txt";
-//    final static String ANSWER_ = "\\src\\main\\resources\\answer.json";
+    ConsoleReader consoleReader = new ConsoleReader();
 
     private String type;
 
@@ -30,20 +27,17 @@ public class DataDriver {
     }
 
     public List<Ingridient> readInput(){
-        List<Ingridient> ingridients = new ArrayList();
+        List<Ingridient> ingridients = new ArrayList<Ingridient>();
         switch (type){
-            case "2": ingridients = jsonReader.readJson();
+            case "1": ingridients = consoleReader.read();
                     break;
-            case "3": ingridients = fileReaderAndWriter.split();
+            case "2": ingridients = jsonReader.read();
                     break;
-            case "4": ingridients = dbReader.readDB();
+            case "3": ingridients = fileReaderAndWriter.read();
+                    break;
+            case "4": ingridients = dbReader.read();
+                    break;
         }
-//        if (type.equals("2")) {
-//            ingridients = jsonReader.readJson(ORDER_JSON);
-//
-//        } else if (type.equals("3")) {
-//            ingridients = fileReaderAndWriter.split();
-//        }
         return ingridients;
     }
 }
