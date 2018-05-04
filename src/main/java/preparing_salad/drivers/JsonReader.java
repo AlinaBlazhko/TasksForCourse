@@ -54,10 +54,6 @@ public class JsonReader implements Reader{
             }
         }
 
-//        System.out.println("Your order: ");
-//        for (Ingridient ingridient: ingridients) {
-//            System.out.println(ingridient.toString());
-//        }
         System.out.println("Your order: ");
         Collections.sort(ingridients);
 
@@ -66,23 +62,4 @@ public class JsonReader implements Reader{
         }
         return ingridients;
     }
-
-
-//    public void writeAnswer(String filePath, String name, List<Ingridient> ingridients, String total){
-//        AnswerSchema answer = new AnswerSchema();
-//        answer.setName(name);
-//        answer.setIngridientList(ingridients);
-//        answer.setTotal(total);
-//        String json = gson.toJson(answer);
-//
-//        try {
-//            //write converted json data to a file named "CountryGSON.json"
-//            FileWriter writer = new FileWriter(filePath);
-//            writer.write(json);
-//            writer.close();
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 }

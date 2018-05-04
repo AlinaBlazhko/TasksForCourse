@@ -3,6 +3,7 @@ package preparing_salad.drivers;
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import preparing_salad.Ingridient;
 import preparing_salad.exceptions.IllegalWeightOfIngridientException;
+import preparing_salad.exceptions.UncorrectAnswerException;
 import preparing_salad.vegetable.*;
 
 import java.util.ArrayList;
@@ -61,6 +62,12 @@ public class ConsoleReader implements Reader{
                     break;
             }
             System.out.println("Anything else? (type  \"no\" or \"yes\") ");
+//            answer = in.nextLine();
+            if ((!equals(in.nextLine().equals("no")))||(!equals(in.nextLine().equals("yes")))) try{
+                throw new UncorrectAnswerException(in.nextLine());
+            } catch (UncorrectAnswerException e){
+                e.printStackTrace();
+            }
             in.nextLine();
         }
 

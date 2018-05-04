@@ -10,8 +10,8 @@ public class UncorrectAnswerException extends Exception{
         return answer;
     }
 
-    UncorrectAnswerException(String message, String num){
-        super(message);
+    public UncorrectAnswerException(String num){
+        super("Please, write \"yes\" or \"no\"");
         answer = num;
     }
 }
