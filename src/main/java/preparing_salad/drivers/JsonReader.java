@@ -2,7 +2,6 @@ package preparing_salad.drivers;
 
 import com.google.gson.Gson;
 import preparing_salad.Ingridient;
-import preparing_salad.json.AnswerSchema;
 import preparing_salad.json.OrderJson;
 import preparing_salad.vegetable.*;
 import preparing_salad.exceptions.IllegalWeightOfIngridientException;
@@ -54,7 +53,7 @@ public class JsonReader implements Reader{
             }
         }
 
-        System.out.println("Your order: ");
+        System.out.println("Your order (in order of increasing caloric content): ");
         Collections.sort(ingridients);
 
         for(Ingridient str: ingridients){

@@ -84,7 +84,8 @@ public class DBReader implements Reader{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println("Your order: ");
+        System.out.println("Your order (in order of increasing caloric content): ");
+
         for (Ingridient in: ingridients) {
             System.out.println(in.getName() + " " + in.getWeight());
         }

@@ -32,4 +32,21 @@ public class Matrix {
             System.out.println();
         }
     }
+
+    public void multipleTwoMatrix(int[][] mA, int[][] mB, int[][] res){
+        for (int i = 0; i < mA.length; i++) {
+            for (int j = 0; j < mB.length; j++) {
+                for (int k = 0; k < mB.length; k++) {
+                    res[i][j] += mA[i][k] * mB[k][j];
+                }
+            }
+        }
+
+        for (int i = 0; i < res.length; i++) {
+            for (int j = 0; j < res[0].length; j++) {
+                System.out.format("%6d ", res[i][j]);
+            }
+            System.out.println();
+        }
+    }
 }

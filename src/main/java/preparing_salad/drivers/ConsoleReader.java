@@ -71,7 +71,7 @@ public class ConsoleReader implements Reader{
             in.nextLine();
         }
 
-        System.out.println("Your order: ");
+        System.out.println("Your order (in order of increasing caloric content): ");
         Collections.sort(ingridients);
 
         for(Ingridient str: ingridients){

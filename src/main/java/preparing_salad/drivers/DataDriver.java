@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class DataDriver {
     JsonReader jsonReader = new JsonReader();
-    FileReaderAndWriter fileReaderAndWriter = new FileReaderAndWriter();
+    FileRead fileReaderAndWriter = new FileRead();
     DBReader dbReader = new DBReader();
     ConsoleReader consoleReader = new ConsoleReader();
 
@@ -34,6 +34,7 @@ public class DataDriver {
             case "2": ingridients = jsonReader.read();
                     break;
             case "3": ingridients = fileReaderAndWriter.read();
+                    fileReaderAndWriter.writer("src\\main\\resources\\answer.txt");
                     break;
             case "4": ingridients = dbReader.read();
                     break;

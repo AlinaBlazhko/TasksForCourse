@@ -26,19 +26,6 @@ public class Main {
 
         int[][] res = new int[n][m];
 
-        for (int i = 0; i < mA.length; i++) {
-            for (int j = 0; j < mB.length; j++) {
-                for (int k = 0; k < mB.length; k++) {
-                    res[i][j] += mA[i][k] * mB[k][j];
-                }
-            }
-        }
-
-        for (int i = 0; i < res.length; i++) {
-            for (int j = 0; j < res[0].length; j++) {
-                System.out.format("%6d ", res[i][j]);
-            }
-            System.out.println();
-        }
+        matrix.multipleTwoMatrix(mA, mB, res);
     }
 }
