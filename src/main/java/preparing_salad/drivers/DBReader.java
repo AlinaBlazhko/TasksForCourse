@@ -8,27 +8,6 @@ import java.util.*;
 
 public class DBReader implements Reader{
 
-
-//        try {
-//            Connection con = DriverManager.getConnection
-//                    ("jdbc:derby:junkdb;create=true","app","app");
-//
-//            Statement stmt = con.createStatement();
-//
-//            stmt.executeUpdate("CREATE TABLE VEGETABLES (ID INT PRIMARY KEY, VEGETABLE VARCHAR(12), WEIGHT INT)");
-//            System.out.println("Created Table");
-//
-//            stmt.executeUpdate("INSERT INTO VEGETABLES VALUES (1,'potato', 300),(2,'cucumber', 200),(3,'onion', 40)");
-//            System.out.println("Populated Table");
-//
-//            System.out.println("Done");
-//
-//        } catch(SQLException e) {
-//            System.out.println("SQL exception occured" + e.toString() );
-//        }
-
-
-
     @Override
     public List<Ingridient> read() {
         try {
